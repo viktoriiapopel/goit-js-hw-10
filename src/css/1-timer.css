@@ -1,10 +1,72 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+input {
+  cursor: text;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  padding-left: 16px;
+  width: 272px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+input:hover:not(:disabled) {
+  color: #2e2f42;
+  border-color: #000;
+}
+
+input:active:not(:disabled) {
+  color: #000;
+  border-color: #4e75ff;
+}
+
+input:disabled {
+  cursor: not-allowed;
+  color: #808080;
+  border: 1px solid #808080;
+  background-color: #fafafa;
+}
+
+.button {
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 75px;
+  height: 40px;
+  background: #4e75ff;
+  border: solid #4e75ff;
+}
+
+.button:hover:not(:disabled) {
+  background: #6c8cff;
+  border-color: #6c8cff;
+}
+.button:disabled {
+  cursor: not-allowed;
+  background: #cfcfcf;
+  border: solid #cfcfcf;
+}
+
 .timer {
   display: flex;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-  font-family: monospace;
-  margin-top: 20px;
+  gap: 24px;
+  /* justify-content: center;
+  align-items: center; */
+  margin-top: 32px;
 }
 
 .field {
@@ -13,11 +75,18 @@
 
 .value {
   display: block;
-  font-size: 36px;
-  font-weight: bold;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
 }
 
 .label {
-  font-size: 14px;
-  color: #555;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2e2f42;
 }

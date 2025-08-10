@@ -8,6 +8,9 @@ import 'izitoast/dist/css/iziToast.min.css';
 const startBt = document.querySelector('[data-start]');
 startBt.disabled = true;
 
+const dateInput = document.querySelector('#datetime-picker');
+
+
 const daysEl = document.querySelector('[data-days]');
 const hoursEl = document.querySelector('[data-hours]');
 const minutesEl = document.querySelector('[data-minutes]');
@@ -55,7 +58,8 @@ const timer = {
         this.initTime = userSelectedDate.getTime();
 
         if (this.intervalId) return;
-        startBt.disabled = true;
+      startBt.disabled = true;
+      dateInput.disabled = true;
         this.tick();
         this.intervalId = setInterval(() => {
             this.tick();
@@ -82,7 +86,8 @@ const timer = {
   position: 'topRight',
   timeout: 3000,
     });
- startBt.disabled = false; 
+          startBt.disabled = false; 
+          dateInput.disabled = false;
 
     return;
 
